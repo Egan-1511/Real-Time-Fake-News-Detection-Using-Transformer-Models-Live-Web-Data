@@ -1,0 +1,10 @@
+flask
+transformers
+torch
+sklearn
+pandas
+datasets
+numpy
+requests
+re
+torchvision

@@ -1,0 +1,6 @@
+# Auto detect text files and perform LF normalization
+* text=auto
+
+# Force specific files to keep LF
+bert-fake-news/tokenizer.json text eol=lf
+bert-fake-news/vocab.txt text eol=lf
