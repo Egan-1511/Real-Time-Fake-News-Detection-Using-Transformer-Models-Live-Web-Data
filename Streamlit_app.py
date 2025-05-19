@@ -1,18 +1,18 @@
 import streamlit as st
-from app.scraper import fetch_latest_news  # Your own module
-from app.predictor import predict_news  # Your model's prediction function
+from app.scraper import fetch_latest_news  
+from app.predictor import predict_news  
 
-# Streamlit app layout
+
 st.set_page_config(page_title="Fake News Detector", layout="centered")
 
 st.title("📰 Real-Time Fake News Detector")
 st.markdown("Predict whether a news headline is **Real** or **Fake** using a Transformer-based NLP model.")
 
-# User input
+
 st.subheader("🔍 Enter News Headline or Article")
 user_input = st.text_area("Paste your news content or headline here", height=150)
 
-# Predict button
+
 if st.button("Predict"):
     if user_input.strip() == "":
         st.warning("Please enter a headline or news content.")
@@ -24,7 +24,7 @@ if st.button("Predict"):
 
 st.markdown("---")
 
-# Live News Section
+
 st.subheader("🌐 Check Live News Headlines")
 if st.button("Fetch Live News"):
     with st.spinner("Fetching live news..."):
@@ -39,5 +39,5 @@ if st.button("Fetch Live News"):
             st.markdown(f"> Prediction: **{label}** ({conf*100:.1f}%)")
             st.markdown("---")
 
-# Footer
+
 st.markdown("Made with ❤️ by Egan")
